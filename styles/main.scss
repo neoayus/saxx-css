@@ -1,3 +1,11 @@
-/* /styles
+// Including Math f() 
+@use 'sass:math' ;
+
+// Partials : 
+@use './utils/variables' ; 
+@use './utils/prerequisites' ; 
+@use './utils/mixins' ;
+
+
 
 
