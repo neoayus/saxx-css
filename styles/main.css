@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* /styles
+├── _variables.scss  // Global variables
+├── _mixins.scss     // Reusable mixins
+├── _base.scss       // Basic styles (e.g., resets, global elements)
+├── _buttons.scss    // Button-specific styles
+├── _header.scss     // Header-specific styles
+├── _footer.scss     // Footer-specific styles
+└── main.scss        // Main file to import all partials
+ *//*# sourceMappingURL=main.css.map */
