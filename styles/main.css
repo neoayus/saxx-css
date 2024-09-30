@@ -22,6 +22,12 @@ body {
   flex-flow: column wrap;
   justify-content: center;
 }
+body a:hover, body li:hover {
+  color: #1edab4;
+  text-decoration: none;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
 body header {
   margin-bottom: 15px;
 }
@@ -44,8 +50,14 @@ body main .mail {
   width: 80vw;
   padding: 0 15px;
   background-color: rgba(255, 255, 255, 0);
-  border: 2px solid #93969A;
+  outline: 2px solid #93969A;
   border-radius: 5px;
+}
+body main .mail:focus {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: 2px solid #1edab4;
+  transition: all 0.3s ease-in;
 }
 body main .mail::-moz-placeholder {
   color: #93969A;
@@ -61,6 +73,7 @@ body main .button {
   text-align: center;
   font-weight: 600;
   border-radius: 5px;
+  opacity: 0.8;
   font-size: 1.01rem;
   margin-top: 20px;
 }
