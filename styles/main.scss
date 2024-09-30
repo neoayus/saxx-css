@@ -1,11 +1,110 @@
-// Including Math f() 
+// math function 
 @use 'sass:math' ;
 
 // Partials : 
-@use './utils/variables' ; 
-@use './utils/prerequisites' ; 
 @use './utils/mixins' ;
+@use './utils/prerequisites' ; 
 
 
+// mixins : 
+@mixin green-button{
+    height: 46px ;  
+    width: 80vw ; 
+
+    color: white ; 
+    background-color: $button ;    
+
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px ;
+}
+
+// variables : 
+$heading-color: white ; 
+$primary-color: #93969A ; 
+$link :#1CB495 ; 
+$button :#1CB495 ;  
+$font-size: 1rem ; 
 
 
+// STYLE : 
+body{
+    height: 100vh ;
+    background-image: url('../assets/images/bg01.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    // padding: 0 25px ; 
+    margin: 0 30px ; 
+    
+    display: flex; 
+    flex-flow: column wrap ; 
+    justify-content: center ;
+    
+ // styling header 
+    header{
+        h1{
+            margin-bottom: 20px ;
+            font-weight: 700 ;
+        }
+        .header__text{
+            margin-bottom: 20px ;
+            opacity: .5  ;
+            line-height: 1.5;
+        }
+        margin-bottom: 15px ;
+    }
+    
+ // styling main 
+    main{
+        display: flex ; 
+        flex-flow: column wrap ; 
+        .mail{
+            font-size: 1rem ;
+            height: 47px ; 
+            width: 80vw ; 
+            padding: 0 15px ;
+            background-color: rgba(255, 255, 255, 0) ;
+            border: 2px solid $primary-color ;
+            border-radius: 5px ;
+            &::placeholder{
+                color: $primary-color ;
+            }
+        }
+        .button{
+            @include green-button() ; 
+            font-size: 1.01rem ; 
+            margin-top: 20px ; 
+        }
+    }
+    
+//  styling footer 
+    footer{
+        position: absolute ; 
+        bottom: 40px ; 
+        opacity: .5 ;
+        ul{
+            li{
+                list-style-type: none;
+                display: inline-block ; 
+            }
+        }
+        .footer__icons{
+            font-size: 1.3rem ;                      
+            li{
+                padding-right: 14px ; 
+            }
+        }
+
+        .footer__copyright{
+            font-size: .8rem ;
+            font-weight: 300;
+            padding-top: 12px ;
+            li{
+                &:last-child{
+                    padding-left : 8px ; 
+                }
+            }
+        }
+    }
+
+}
